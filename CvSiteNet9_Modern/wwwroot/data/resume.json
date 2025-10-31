@@ -1,110 +1,146 @@
 {
-  "Name": "Yunus Emre SEVİNDİK",
-  "Title": ".NET Core MVC Geliştirici",
-  "Summary": "Ölçeklenebilir web uygulamaları ve temiz mimari odaklı full-stack geliştirici. Bulut dağıtımı ve CI/CD pratiklerine hakim.",
-  "Location": "İstanbul, Türkiye",
+  "Name": "Yunus Emre Sevindik",
+  "Title": "Bilgisayar Mühendisi & Yazılım Eğitmeni",
+  "Summary": "Bilişim ve yazılım sektöründe 9 yılı aşkın deneyimle; eğitim, danışmanlık ve ürün geliştirme projelerinde teknik bilgimi güçlü iletişim ve organizasyon becerilerimle birleştiririm.",
+  "Location": "Sakarya, Türkiye",
   "Email": "svndkyes33@gmail.com",
   "Phone": "+90 5xx xxx xx xx",
   "Social": {
-    "Github": "https://github.com/your-github",
-    "LinkedIn": "https://www.linkedin.com/in/your-linkedin",
-    "Website": "https://your-site.com",
-    "X": "https://x.com/your-handle"
+    "Github": "",
+    "LinkedIn": "https://www.linkedin.com/in/yunusemresevindik",
+    "Website": "",
+    "X": ""
   },
+  "Highlights": [
+    "SAKARYATEK Teknokent Kulübü'nde yönetim kurulu ve komite liderliği ile etkinlik stratejileri geliştirdim.",
+    "Kurucusu olduğum dijital yönetim girişimiyle farklı sektörlere özel yazılım ve web platformları tasarladım.",
+    "Özel nitelikli eğitim merkezinde yazılım teknolojileri eğitimi vererek %92 öğrenci başarı oranı elde ettim."
+  ],
+  "Metrics": [
+    { "Value": "9+", "Label": "Yıllık Yazılım Deneyimi" },
+    { "Value": "%92", "Label": "Öğrenci Başarı Oranı" },
+    { "Value": "30+", "Label": "Tamamlanan Dijital Proje" },
+    { "Value": "4", "Label": "Stratejik Odak Alanı" }
+  ],
+  "FocusAreas": [
+    {
+      "Title": "Liderlik ve Organizasyon",
+      "Description": "SAKARYATEK Teknokent Kulübü'nde yönetim kurulu üyeliği, eğitim ve sosyal etkinlik komitelerinde liderlik üstlenerek ekip koordinasyonu ve stratejik planlama deneyimi kazandım."
+    },
+    {
+      "Title": "İş Geliştirme",
+      "Description": "Kurduğum dijital yönetim girişimiyle müşteri ihtiyaçlarını analiz ederek SEO uyumlu web içerikleri, performans odaklı siteler ve sürdürülebilir iş modelleri tasarladım."
+    },
+    {
+      "Title": "Mobil Uygulama Geliştirme",
+      "Description": "Flutter ve Dart ile kullanıcı deneyimi odaklı prototipler oluşturarak eğitim ve danışmanlık projelerine değer katan mobil çözümler geliştirdim."
+    },
+    {
+      "Title": "Mesleki Uygulama Geliştirme",
+      "Description": "Katmanlı mimari ve temiz kod prensipleriyle kurumsal web uygulamaları geliştirerek sürdürülebilir, test edilebilir ve güvenilir yazılım çözümleri sundum."
+    }
+  ],
   "Skills": [
     {
-      "Heading": "Diller",
-      "Items": [
-        "C#",
-        "JavaScript",
-        "SQL"
-      ]
+      "Heading": "Programlama Dilleri",
+      "Items": ["C#", "Java", "Python", "Dart"]
     },
     {
-      "Heading": "Çatılar",
-      "Items": [
-        "ASP.NET Core MVC",
-        "Entity Framework Core"
-      ]
-    },
-    {
-      "Heading": "Araçlar",
-      "Items": [
-        "Git",
-        "Docker",
-        "Azure DevOps"
-      ]
+      "Heading": "Web Teknolojileri",
+      "Items": ["ASP.NET Core", "MVC", "REST API", "Responsive Tasarım"]
     },
     {
       "Heading": "Veritabanı",
-      "Items": [
-        "PostgreSQL",
-        "SQLite"
-      ]
+      "Items": ["MSSQL", "PostgreSQL", "Firebase"]
+    },
+    {
+      "Heading": "Teknolojiler",
+      "Items": ["Git", "Azure", "Docker", "Entity Framework", "CI/CD"]
     }
   ],
   "Experiences": [
     {
-      "Company": "Örnek Teknoloji",
-      "Role": "Kıdemli Yazılım Geliştirici",
+      "Company": "Özel Nitelikli Mesleki Eğitim Merkezi",
+      "Role": "Bilişim Teknolojileri Eğitmeni",
       "Start": "2023",
-      "End": "2025",
-      "Location": "İstanbul",
+      "End": "2024",
+      "Location": "Sakarya",
       "Highlights": [
-        "ASP.NET Core 9 ile modüler mimari üzerinde geliştirme.",
-        "EF Core ile performans iyileştirmeleri (N+1 önleme, asenkron işlemler).",
-        "Docker ile container tabanlı dağıtım ve GitHub Actions ile CI/CD."
+        "Yazılım teknolojileri alanında teorik ve pratik dersler verdim.",
+        "Öğrencilerin teknik projelerine mentorluk sağlayarak mezuniyet portföylerini güçlendirdim.",
+        "Yönettiğim sınıflarda %92 başarı oranı yakaladım."
       ]
     },
     {
-      "Company": "ABC Yazılım",
-      "Role": "Yazılım Geliştirici",
-      "Start": "2020",
+      "Company": "Dijital Yönetim (Kendi Girişimim)",
+      "Role": "Kurucu & Yazılım Danışmanı",
+      "Start": "2021",
       "End": "2023",
       "Location": "Uzaktan",
       "Highlights": [
-        "Kurumsal portal için MVC modülleri ve REST API'ler geliştirdim.",
-        "Ön yüzde Bootstrap 5 ve vanilla JS ile bileşenler.",
-        "Kod kalite standartları: kod incelemesi, birim testleri."
+        "Farklı sektörlerden müşteriler için özel yazılım çözümleri ve kurumsal web siteleri geliştirdim.",
+        "SEO uyumlu içerik stratejileri ve performans odaklı kullanıcı deneyimleri tasarladım.",
+        "Operasyonel süreçler, müşteri ilişkileri ve nakit akışını yönettim."
+      ]
+    },
+    {
+      "Company": "Turkuaz Bilgisayar",
+      "Role": "Yazılım Destek Uzmanı",
+      "Start": "2015",
+      "End": "2021",
+      "Location": "Sakarya",
+      "Highlights": [
+        "ERP ve muhasebe yazılımları için son kullanıcı desteği ve eğitimleri sağladım.",
+        "Müşteri ihtiyaçlarını analiz ederek özelleştirilmiş modüller geliştirdim.",
+        "İç süreçleri otomatikleştiren entegrasyonlar ile verimlilik artışı sağladım."
       ]
     }
   ],
   "Educations": [
     {
-      "School": "X Üniversitesi",
+      "School": "Sakarya Üniversitesi",
       "Degree": "Bilgisayar Mühendisliği",
-      "Years": "2016 - 2020",
-      "Detail": "Yüksek Onur Derecesi"
+      "Years": "2010 - 2015",
+      "Detail": "Lisans"
+    },
+    {
+      "School": "SAÜ Bilgisayar Mühendisliği Topluluğu",
+      "Degree": "Aktif Görevli & Organizasyon Ekibi",
+      "Years": "2011 - 2015",
+      "Detail": "Etkinlik ve eğitim komitesi sorumluluğu"
+    },
+    {
+      "School": "Serdivan Anadolu Lisesi",
+      "Degree": "Fen Bilimleri",
+      "Years": "2006 - 2010"
     }
   ],
   "Projects": [
     {
-      "Name": "Kişisel CV Sitesi",
-      "Description": "Özgeçmiş, proje ve iletişim modüllerini içeren responsive MVC uygulaması.",
-      "Tech": [
-        "ASP.NET Core 9",
-        "Razor",
-        "Bootstrap 5"
-      ],
+      "Name": "Mesleki Eğitim Platformu",
+      "Description": "Eğitim kurumlarının ders planlarını, öğrenci takibini ve sınav sonuçlarını yönettiği responsive web platformu.",
+      "Tech": ["ASP.NET Core", "EF Core", "PostgreSQL", "Bootstrap"],
       "Url": "",
       "Repo": ""
     },
     {
-      "Name": "Görev Takip",
-      "Description": "Basit bir görev takip sistemi (CRUD + filtreleme).",
-      "Tech": [
-        "ASP.NET Core",
-        "EF Core",
-        "SQLite"
-      ]
+      "Name": "Dijital Yönetim Web Ekosistemi",
+      "Description": "Kurucusu olduğum ajans için SEO uyumlu kurumsal site, blog ve müşteri portalı geliştirdim.",
+      "Tech": ["ASP.NET Core", "REST API", "Azure App Service"],
+      "Url": "",
+      "Repo": ""
     },
     {
-      "Name": "Hava Durumu",
-      "Description": "Harici API'den hava verisi alan küçük bir web app.",
-      "Tech": [
-        "ASP.NET Core",
-        "HttpClient"
-      ]
+      "Name": "ERP Entegrasyon Modülleri",
+      "Description": "Turkuaz Bilgisayar müşterileri için ERP ve muhasebe süreçlerini hızlandıran özelleştirilmiş modüller tasarladım.",
+      "Tech": ["C#", "WCF", "MSSQL", "Windows Services"],
+      "Url": "",
+      "Repo": ""
     }
-  ]
+  ],
+  "Languages": [
+    { "Name": "İngilizce", "Level": "B2" },
+    { "Name": "Almanca", "Level": "A2" }
+  ],
+  "ReferenceNote": "Referanslar talep edilmesi halinde paylaşılabilir."
 }

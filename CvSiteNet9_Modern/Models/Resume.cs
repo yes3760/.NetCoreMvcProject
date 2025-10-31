@@ -12,9 +12,14 @@ namespace CvSiteNet9_Modern.Models
         public string? Phone { get; set; }
         public SocialLinks Social { get; set; } = new();
         public List<SkillSection> Skills { get; set; } = new();
+        public List<string> Highlights { get; set; } = new();
+        public List<Metric> Metrics { get; set; } = new();
+        public List<FocusArea> FocusAreas { get; set; } = new();
         public List<Experience> Experiences { get; set; } = new();
         public List<Education> Educations { get; set; } = new();
         public List<Project> Projects { get; set; } = new();
+        public List<LanguageSkill> Languages { get; set; } = new();
+        public string? ReferenceNote { get; set; }
     }
 
     public class SocialLinks
@@ -56,6 +61,24 @@ namespace CvSiteNet9_Modern.Models
         public List<string>? Tech { get; set; }
         public string? Url { get; set; }
         public string? Repo { get; set; }
+    }
+
+    public class Metric
+    {
+        public string Value { get; set; } = "";
+        public string Label { get; set; } = "";
+    }
+
+    public class FocusArea
+    {
+        public string Title { get; set; } = "";
+        public string Description { get; set; } = "";
+    }
+
+    public class LanguageSkill
+    {
+        public string Name { get; set; } = "";
+        public string Level { get; set; } = "";
     }
 
     public class ContactMessage

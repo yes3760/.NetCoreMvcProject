@@ -1,25 +1,36 @@
 @model CvSiteNet9_Modern.Models.Resume
 @{
-    ViewData["Title"] = "Projeler";
+    ViewData["Title"] = $"Projeler | {Model.Name}";
+    ViewData["Description"] = $"{Model.Name} tarafından geliştirilen öne çıkan yazılım projeleri ve teknoloji stack'i.";
 }
 <section class="reveal">
-    <h1 class="h3 mb-4">Projeler</h1>
+    <h1 class="h3 mb-3">Projeler</h1>
+    <p class="text-secondary mb-4">Danışmanlık, eğitim ve kurumsal dönüşüm projelerinde kullandığım teknolojileri ve iş problemlerine getirdiğim çözümleri keşfedin.</p>
+
     <div class="grid-portfolio">
         @foreach (var p in Model.Projects)
         {
             <article class="card glass h-100 hover-lift">
                 <div class="card-body">
-                    <h5 class="card-title">@p.Name</h5>
+                    <h3 class="card-title">@p.Name</h3>
                     <p class="card-text text-secondary">@p.Description</p>
                     <div class="d-flex gap-2 flex-wrap">
                         @if (p.Tech != null) { foreach (var t in p.Tech) { <span class="chip">@t</span> } }
                     </div>
                 </div>
-                <div class="card-footer bg-transparent border-0">
-                    @if (!string.IsNullOrWhiteSpace(p.Url)) { <a class="btn btn-outline-primary btn-sm me-2" href="@p.Url" target="_blank">Demo</a> }
-                    @if (!string.IsNullOrWhiteSpace(p.Repo)) { <a class="btn btn-outline-dark btn-sm" href="@p.Repo" target="_blank">Kod</a> }
+                <div class="card-footer bg-transparent border-0 d-flex gap-2">
+                    @if (!string.IsNullOrWhiteSpace(p.Url)) { <a class="btn btn-outline-primary btn-sm" href="@p.Url" target="_blank" rel="noopener">Demo</a> }
+                    @if (!string.IsNullOrWhiteSpace(p.Repo)) { <a class="btn btn-outline-dark btn-sm" href="@p.Repo" target="_blank" rel="noopener">Kod</a> }
                 </div>
             </article>
         }
+    </div>
+
+    <div class="callout glass mt-5">
+        <div>
+            <h2 class="h5 mb-1">Yeni bir proje mi planlıyorsunuz?</h2>
+            <p class="mb-0 text-secondary">İhtiyacınızı konuşalım; doğru teknoloji yığını ve yol haritasını birlikte oluşturalım.</p>
+        </div>
+        <a class="btn btn-primary hover-lift" asp-controller="Contact" asp-action="Index">İletişim</a>
     </div>
 </section>
