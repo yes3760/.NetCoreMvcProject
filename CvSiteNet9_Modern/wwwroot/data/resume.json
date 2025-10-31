@@ -1,0 +1,110 @@
+{
+  "Name": "Yunus Emre SEVİNDİK",
+  "Title": ".NET Core MVC Geliştirici",
+  "Summary": "Ölçeklenebilir web uygulamaları ve temiz mimari odaklı full-stack geliştirici. Bulut dağıtımı ve CI/CD pratiklerine hakim.",
+  "Location": "İstanbul, Türkiye",
+  "Email": "svndkyes33@gmail.com",
+  "Phone": "+90 5xx xxx xx xx",
+  "Social": {
+    "Github": "https://github.com/your-github",
+    "LinkedIn": "https://www.linkedin.com/in/your-linkedin",
+    "Website": "https://your-site.com",
+    "X": "https://x.com/your-handle"
+  },
+  "Skills": [
+    {
+      "Heading": "Diller",
+      "Items": [
+        "C#",
+        "JavaScript",
+        "SQL"
+      ]
+    },
+    {
+      "Heading": "Çatılar",
+      "Items": [
+        "ASP.NET Core MVC",
+        "Entity Framework Core"
+      ]
+    },
+    {
+      "Heading": "Araçlar",
+      "Items": [
+        "Git",
+        "Docker",
+        "Azure DevOps"
+      ]
+    },
+    {
+      "Heading": "Veritabanı",
+      "Items": [
+        "PostgreSQL",
+        "SQLite"
+      ]
+    }
+  ],
+  "Experiences": [
+    {
+      "Company": "Örnek Teknoloji",
+      "Role": "Kıdemli Yazılım Geliştirici",
+      "Start": "2023",
+      "End": "2025",
+      "Location": "İstanbul",
+      "Highlights": [
+        "ASP.NET Core 9 ile modüler mimari üzerinde geliştirme.",
+        "EF Core ile performans iyileştirmeleri (N+1 önleme, asenkron işlemler).",
+        "Docker ile container tabanlı dağıtım ve GitHub Actions ile CI/CD."
+      ]
+    },
+    {
+      "Company": "ABC Yazılım",
+      "Role": "Yazılım Geliştirici",
+      "Start": "2020",
+      "End": "2023",
+      "Location": "Uzaktan",
+      "Highlights": [
+        "Kurumsal portal için MVC modülleri ve REST API'ler geliştirdim.",
+        "Ön yüzde Bootstrap 5 ve vanilla JS ile bileşenler.",
+        "Kod kalite standartları: kod incelemesi, birim testleri."
+      ]
+    }
+  ],
+  "Educations": [
+    {
+      "School": "X Üniversitesi",
+      "Degree": "Bilgisayar Mühendisliği",
+      "Years": "2016 - 2020",
+      "Detail": "Yüksek Onur Derecesi"
+    }
+  ],
+  "Projects": [
+    {
+      "Name": "Kişisel CV Sitesi",
+      "Description": "Özgeçmiş, proje ve iletişim modüllerini içeren responsive MVC uygulaması.",
+      "Tech": [
+        "ASP.NET Core 9",
+        "Razor",
+        "Bootstrap 5"
+      ],
+      "Url": "",
+      "Repo": ""
+    },
+    {
+      "Name": "Görev Takip",
+      "Description": "Basit bir görev takip sistemi (CRUD + filtreleme).",
+      "Tech": [
+        "ASP.NET Core",
+        "EF Core",
+        "SQLite"
+      ]
+    },
+    {
+      "Name": "Hava Durumu",
+      "Description": "Harici API'den hava verisi alan küçük bir web app.",
+      "Tech": [
+        "ASP.NET Core",
+        "HttpClient"
+      ]
+    }
+  ]
+}

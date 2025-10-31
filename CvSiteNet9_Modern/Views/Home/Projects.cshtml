@@ -1,0 +1,25 @@
+@model CvSiteNet9_Modern.Models.Resume
+@{
+    ViewData["Title"] = "Projeler";
+}
+<section class="reveal">
+    <h1 class="h3 mb-4">Projeler</h1>
+    <div class="grid-portfolio">
+        @foreach (var p in Model.Projects)
+        {
+            <article class="card glass h-100 hover-lift">
+                <div class="card-body">
+                    <h5 class="card-title">@p.Name</h5>
+                    <p class="card-text text-secondary">@p.Description</p>
+                    <div class="d-flex gap-2 flex-wrap">
+                        @if (p.Tech != null) { foreach (var t in p.Tech) { <span class="chip">@t</span> } }
+                    </div>
+                </div>
+                <div class="card-footer bg-transparent border-0">
+                    @if (!string.IsNullOrWhiteSpace(p.Url)) { <a class="btn btn-outline-primary btn-sm me-2" href="@p.Url" target="_blank">Demo</a> }
+                    @if (!string.IsNullOrWhiteSpace(p.Repo)) { <a class="btn btn-outline-dark btn-sm" href="@p.Repo" target="_blank">Kod</a> }
+                </div>
+            </article>
+        }
+    </div>
+</section>

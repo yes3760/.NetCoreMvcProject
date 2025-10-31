@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "CvSiteNet9_Modern/1.0.0": {
+        "runtime": {
+          "CvSiteNet9_Modern.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CvSiteNet9_Modern/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

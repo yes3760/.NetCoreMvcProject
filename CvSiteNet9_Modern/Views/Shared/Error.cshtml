@@ -1,0 +1,12 @@
+@model ErrorViewModel
+@{
+    ViewData["Title"] = "Hata";
+}
+<section class="card glass p-4 my-5 text-center">
+    <h1 class="display-6 mb-3">Bir hata oluştu.</h1>
+    @if (Model.ShowRequestId)
+    {
+        <p><strong>İstek No:</strong> <code>@Model.RequestId</code></p>
+    }
+    <p class="text-muted">Beklenmeyen bir hata oluştu. Daha sonra tekrar deneyiniz.</p>
+</section>

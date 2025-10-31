@@ -1,0 +1,73 @@
+@{
+    var title = ViewData["Title"] as string ?? "CV";
+}
+<!doctype html>
+<html lang="tr" data-theme="light">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@title - CV</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <script>
+        // Theme bootstrap before paint
+        (function() {
+            const saved = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
+        })();
+    </script>
+</head>
+<body>
+    <div class="bg-accent-gradient position-fixed top-0 start-0 w-100 h-100 opacity-25 pointer-events-none"></div>
+
+    <nav class="navbar navbar-expand-lg modern-nav sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-gradient" asp-controller="Home" asp-action="Index">Yunus<span class="dot">.</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Menü">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Index">Anasayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Resume">Özgeçmiş</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Projects">Projeler</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Contact" asp-action="Index">İletişim</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <button id="themeToggle" class="btn btn-theme-toggle" aria-label="Tema değiştir">
+                            <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Zm0-16a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1Zm0 18a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1Zm10-9a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1ZM4 12a1 1 0 0 1-1 1H2a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1Zm14.95 7.364a1 1 0 0 1-1.414 0l-.707-.707a1 1 0 0 1 1.414-1.414l.707.707a1 1 0 0 1 0 1.414ZM7.171 6.343A1 1 0 0 1 5.757 4.93l.707-.707A1 1 0 1 1 7.88 5.636l-.707.707Zm12.02-1.414a1 1 0 0 1 0 1.414l-.707.707A1 1 0 1 1 17.07 5.636l.707-.707a1 1 0 0 1 1.414 0ZM6.343 18.364a1 1 0 0 1 0-1.414l.707-.707A1 1 0 0 1 8.464 17.95l-.707.707a1 1 0 0 1-1.414 0Z"/></svg>
+                            <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="py-5">
+        <div class="container container-prose">
+            @RenderBody()
+        </div>
+    </main>
+
+    <footer class="modern-footer">
+        <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-center gap-3">
+            <div class="text-muted small">© @DateTime.Now.Year • CV Sitesi</div>
+            <div class="d-flex gap-3 small">
+                <a class="link-underline" asp-controller="Home" asp-action="Resume">Özgeçmiş</a>
+                <a class="link-underline" asp-controller="Home" asp-action="Projects">Projeler</a>
+                <a class="link-underline" asp-controller="Contact" asp-action="Index">İletişim</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

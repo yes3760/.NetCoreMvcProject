@@ -1,0 +1,36 @@
+@model CvSiteNet9_Modern.Models.ContactMessage
+@{
+    ViewData["Title"] = "İletişim";
+}
+<section class="reveal">
+    <h1 class="h3 mb-3">İletişim</h1>
+    <p class="text-secondary">Aşağıdaki form üzerinden bana ulaşabilirsiniz.</p>
+
+    <form asp-action="Index" method="post" class="card glass shadow-sm p-3 p-lg-4">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label"></label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Message" class="form-label"></label>
+            <textarea asp-for="Message" class="form-control" rows="5"></textarea>
+            <span asp-validation-for="Message" class="text-danger"></span>
+        </div>
+        <div class="d-flex gap-2">
+            <button type="submit" class="btn btn-primary hover-lift">Gönder</button>
+            <a asp-controller="Home" asp-action="Index" class="btn btn-soft-secondary">Vazgeç</a>
+        </div>
+        @Html.AntiForgeryToken()
+    </form>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

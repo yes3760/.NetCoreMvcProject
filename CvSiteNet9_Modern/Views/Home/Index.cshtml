@@ -1,0 +1,62 @@
+@model CvSiteNet9_Modern.Models.Resume
+@{
+    ViewData["Title"] = Model.Name;
+}
+<section class="row align-items-center g-4 hero reveal">
+    <div class="col-md-8">
+        <h1 class="display-5 fw-bold text-gradient">@Model.Name</h1>
+        <p class="lead text-primary-emphasis">@Model.Title</p>
+        @if (!string.IsNullOrWhiteSpace(Model.Summary))
+        {
+            <p class="fs-5 text-secondary">@Model.Summary</p>
+        }
+        <div class="mt-3 d-flex gap-2 flex-wrap">
+            @if (!string.IsNullOrWhiteSpace(Model.Location)) { <span class="chip chip-secondary">@Model.Location</span> }
+            @if (!string.IsNullOrWhiteSpace(Model.Email)) { <a class="chip chip-dark text-decoration-none" href="mailto:@Model.Email">@Model.Email</a> }
+            @if (!string.IsNullOrWhiteSpace(Model.Phone)) { <span class="chip chip-info">@Model.Phone</span> }
+        </div>
+        <div class="mt-3 d-flex gap-2 flex-wrap">
+            @if (!string.IsNullOrWhiteSpace(Model.Social.Github)) { <a class="btn btn-soft-dark btn-sm hover-lift" target="_blank" href="@Model.Social.Github">GitHub</a> }
+            @if (!string.IsNullOrWhiteSpace(Model.Social.LinkedIn)) { <a class="btn btn-soft-primary btn-sm hover-lift" target="_blank" href="@Model.Social.LinkedIn">LinkedIn</a> }
+            @if (!string.IsNullOrWhiteSpace(Model.Social.Website)) { <a class="btn btn-soft-secondary btn-sm hover-lift" target="_blank" href="@Model.Social.Website">Web</a> }
+            @if (!string.IsNullOrWhiteSpace(Model.Social.X)) { <a class="btn btn-soft-dark btn-sm hover-lift" target="_blank" href="@Model.Social.X">X</a> }
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card glass shadow-sm hover-lift reveal">
+            <div class="card-body">
+                <h5 class="card-title">Yetenekler</h5>
+                @foreach (var skill in Model.Skills)
+                {
+                    <div class="mb-2">
+                        <div class="fw-semibold">@skill.Heading</div>
+                        <div class="text-muted">@string.Join(", ", skill.Items)</div>
+                    </div>
+                }
+                <a class="btn btn-primary btn-sm mt-2" asp-action="Resume">Detaylı Özgeçmiş</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mt-5 reveal">
+    <h2 class="h4 mb-3">Öne Çıkan Projeler</h2>
+    <div class="grid-portfolio">
+        @foreach (var p in Model.Projects.Take(3))
+        {
+            <article class="card glass h-100 hover-lift">
+                <div class="card-body">
+                    <h5 class="card-title">@p.Name</h5>
+                    <p class="card-text text-secondary">@p.Description</p>
+                    <div class="d-flex gap-2 flex-wrap">
+                        @if (p.Tech != null) { foreach (var t in p.Tech) { <span class="chip">@t</span> } }
+                    </div>
+                </div>
+                <div class="card-footer bg-transparent border-0">
+                    @if (!string.IsNullOrWhiteSpace(p.Url)) { <a class="btn btn-outline-primary btn-sm me-2" href="@p.Url" target="_blank">Demo</a> }
+                    @if (!string.IsNullOrWhiteSpace(p.Repo)) { <a class="btn btn-outline-dark btn-sm" href="@p.Repo" target="_blank">Kod</a> }
+                </div>
+            </article>
+        }
+    </div>
+</section>

@@ -1,0 +1,61 @@
+@model CvSiteNet9_Modern.Models.Resume
+@{
+    ViewData["Title"] = "Özgeçmiş";
+}
+<section class="reveal">
+    <h1 class="h3 mb-4">Özgeçmiş</h1>
+    <div class="list-group list-group-flush glass mb-4">
+        <div class="list-group-item bg-transparent border-0 px-0">
+            <h2 class="h5">Deneyim</h2>
+        </div>
+        @foreach (var e in Model.Experiences)
+        {
+            <div class="list-group-item bg-transparent">
+                <div class="d-flex justify-content-between align-items-center flex-wrap">
+                    <div>
+                        <div class="fw-semibold">@e.Role - @e.Company</div>
+                        <div class="text-muted small">@e.Location</div>
+                    </div>
+                    <div class="text-nowrap small">@e.Start - @(string.IsNullOrWhiteSpace(e.End) ? "Günümüz" : e.End)</div>
+                </div>
+                <ul class="mt-2">
+                    @foreach (var h in e.Highlights) { <li>@h</li> }
+                </ul>
+            </div>
+        }
+    </div>
+
+    <div class="list-group list-group-flush glass mb-4">
+        <div class="list-group-item bg-transparent border-0 px-0">
+            <h2 class="h5">Eğitim</h2>
+        </div>
+        @foreach (var ed in Model.Educations)
+        {
+            <div class="list-group-item bg-transparent">
+                <div class="fw-semibold">@ed.School - @ed.Degree</div>
+                <div class="text-muted small">@ed.Years</div>
+                @if (!string.IsNullOrWhiteSpace(ed.Detail)) { <div class="mt-1">@ed.Detail</div> }
+            </div>
+        }
+    </div>
+
+    <h2 class="h5">Projeler</h2>
+    <div class="grid-portfolio">
+        @foreach (var p in Model.Projects)
+        {
+            <article class="card glass h-100 hover-lift">
+                <div class="card-body">
+                    <h5 class="card-title">@p.Name</h5>
+                    <p>@p.Description</p>
+                    <div class="d-flex gap-2 flex-wrap">
+                        @if (p.Tech != null) { foreach (var t in p.Tech) { <span class="chip">@t</span> } }
+                    </div>
+                </div>
+                <div class="card-footer bg-transparent border-0">
+                    @if (!string.IsNullOrWhiteSpace(p.Url)) { <a class="btn btn-outline-primary btn-sm me-2" href="@p.Url" target="_blank">Demo</a> }
+                    @if (!string.IsNullOrWhiteSpace(p.Repo)) { <a class="btn btn-outline-dark btn-sm" href="@p.Repo" target="_blank">Kod</a> }
+                </div>
+            </article>
+        }
+    </div>
+</section>
