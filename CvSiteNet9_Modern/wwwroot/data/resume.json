@@ -1,109 +1,178 @@
 {
-  "Name": "Yunus Emre SEVİNDİK",
-  "Title": ".NET Core MVC Geliştirici",
-  "Summary": "Ölçeklenebilir web uygulamaları ve temiz mimari odaklı full-stack geliştirici. Bulut dağıtımı ve CI/CD pratiklerine hakim.",
-  "Location": "İstanbul, Türkiye",
+  "Name": "Yunus Emre Sevindik",
+  "Title": "Bilgisayar Mühendisi & Topluluk Lideri",
+  "Summary": "Bilişim alanında yenilikçi projeler üreten, takım ruhu ve liderlik becerileriyle öne çıkan bilgisayar mühendisi. Organizasyon yönetimi, topluluk oluşturma ve kullanıcı odaklı dijital ürün geliştirme süreçlerinde aktif rol alıyorum.",
+  "Location": "Türkiye",
   "Email": "svndkyes33@gmail.com",
   "Phone": "+90 5xx xxx xx xx",
   "Social": {
-    "Github": "https://github.com/your-github",
-    "LinkedIn": "https://www.linkedin.com/in/your-linkedin",
-    "Website": "https://your-site.com",
-    "X": "https://x.com/your-handle"
+    "Github": "https://github.com/yunusemresevindikk",
+    "LinkedIn": "https://www.linkedin.com/in/yunus-emre-sevindikk",
+    "Website": "",
+    "X": "https://x.com/yunusemresevndk"
   },
   "Skills": [
     {
-      "Heading": "Diller",
+      "Heading": "Teknolojiler",
       "Items": [
-        "C#",
-        "JavaScript",
-        "SQL"
-      ]
-    },
-    {
-      "Heading": "Çatılar",
-      "Items": [
+        "C# / .NET",
         "ASP.NET Core MVC",
-        "Entity Framework Core"
+        "Entity Framework Core",
+        "REST API Tasarımı"
       ]
     },
     {
-      "Heading": "Araçlar",
+      "Heading": "Ön Yüz",
       "Items": [
-        "Git",
-        "Docker",
-        "Azure DevOps"
+        "JavaScript",
+        "Bootstrap 5",
+        "Responsive Tasarım"
       ]
     },
     {
-      "Heading": "Veritabanı",
+      "Heading": "Mobil & Çapraz Platform",
       "Items": [
-        "PostgreSQL",
-        "SQLite"
+        "Flutter",
+        "Android Studio",
+        "Firebase"
       ]
+    },
+    {
+      "Heading": "Organizasyon & İş Yönetimi",
+      "Items": [
+        "Etkinlik Planlama",
+        "Topluluk Yönetimi",
+        "Eğitim Tasarımı"
+      ]
+    }
+  ],
+  "Highlights": [
+    {
+      "Title": "Liderlik ve Organizasyon",
+      "Description": "SADEROT Teknokrat Fakültesi Yönetim Kurulu Üyeliği, Eğitim Komitesi Başkanlığı ve Sosyal Etkinlik Komitesi Başkanlığı görevleriyle ekip yönetimi, etkinlik planlama ve strateji belirleme becerilerimi güçlendirdim.",
+      "Accent": "leadership"
+    },
+    {
+      "Title": "Yeni Girişimler",
+      "Description": "Kurucusu olduğum girişimle müşteri ihtiyaçlarına uygun işlevsel dijital platformlar ve web siteleri geliştirerek ürün yaşam döngüsünün her adımını üstlendim.",
+      "Accent": "startup"
+    },
+    {
+      "Title": "Mobil Uygulama Geliştirme",
+      "Description": "Kişisel projelerim kapsamında farklı platformlarda çalışan mobil uygulamalar geliştirerek kullanıcı deneyimi, performans ve yayınlama süreçlerini yönettim.",
+      "Accent": "mobile"
+    },
+    {
+      "Title": "Eğitim & Workshop",
+      "Description": "İmkanları kısıtlı öğrenciler için gönüllü olarak teknoloji ve kodlama eğitimleri düzenleyerek dijital yetkinliklerini artırmalarına katkı sağladım.",
+      "Accent": "education"
+    },
+    {
+      "Title": "Topluluk Yönetimi",
+      "Description": "Bilişim sektöründeki profesyonellerle seminerler organize edip 400+ kişilik toplulukları yönlendirerek sürdürülebilir bir network kültürü inşa ettim.",
+      "Accent": "community"
+    }
+  ],
+  "Stats": [
+    {
+      "Label": "Topluluk Üyesi",
+      "Value": 400,
+      "Suffix": "+",
+      "Description": "Yönettiğim teknoloji topluluklarındaki aktif üye sayısı"
+    },
+    {
+      "Label": "Organize Edilen Etkinlik",
+      "Value": 25,
+      "Suffix": "+",
+      "Description": "Planladığım seminer, workshop ve sosyal etkinlikler"
+    },
+    {
+      "Label": "Tamamlanan Proje",
+      "Value": 12,
+      "Suffix": "+",
+      "Description": "Girişim projeleri ve müşteri çözümleri"
+    },
+    {
+      "Label": "Gönüllü Eğitim",
+      "Value": 5,
+      "Suffix": "+",
+      "Description": "Farklı şehirlerde düzenlenen eğitim programları"
     }
   ],
   "Experiences": [
     {
-      "Company": "Örnek Teknoloji",
-      "Role": "Kıdemli Yazılım Geliştirici",
-      "Start": "2023",
-      "End": "2025",
-      "Location": "İstanbul",
+      "Company": "SADEROT Teknokrat Fakültesi",
+      "Role": "Yönetim Kurulu Üyesi & Komite Başkanı",
+      "Start": "2021",
+      "End": "Günümüz",
+      "Location": "Türkiye",
       "Highlights": [
-        "ASP.NET Core 9 ile modüler mimari üzerinde geliştirme.",
-        "EF Core ile performans iyileştirmeleri (N+1 önleme, asenkron işlemler).",
-        "Docker ile container tabanlı dağıtım ve GitHub Actions ile CI/CD."
+        "Eğitim ve Sosyal Etkinlik komitelerini aynı anda yönettim.",
+        "Stratejik yol haritaları hazırlayarak topluluk hedeflerini belirledim.",
+        "500 kişiyi aşan etkinliklerde lojistik ve ekip koordinasyonunu sağladım."
       ]
     },
     {
-      "Company": "ABC Yazılım",
-      "Role": "Yazılım Geliştirici",
+      "Company": "Freelance & Yeni Girişimler",
+      "Role": "Kurucu Yazılım Geliştirici",
       "Start": "2020",
-      "End": "2023",
-      "Location": "Uzaktan",
+      "End": "Günümüz",
+      "Location": "Türkiye",
       "Highlights": [
-        "Kurumsal portal için MVC modülleri ve REST API'ler geliştirdim.",
-        "Ön yüzde Bootstrap 5 ve vanilla JS ile bileşenler.",
-        "Kod kalite standartları: kod incelemesi, birim testleri."
+        "Müşteri ihtiyaçlarına göre ölçeklenebilir web uygulamaları tasarladım.",
+        "UI/UX, backend ve dağıtım süreçlerini uçtan uca yönettim.",
+        "İş süreçlerini optimize eden yönetim panelleri ve otomasyon araçları geliştirdim."
+      ]
+    },
+    {
+      "Company": "Gönüllü Eğitim Programları",
+      "Role": "Eğitmen & Mentor",
+      "Start": "2019",
+      "End": "Günümüz",
+      "Location": "Türkiye",
+      "Highlights": [
+        "İmkanları kısıtlı öğrencilere temel kodlama ve algoritma eğitimleri verdim.",
+        "Öğrenci projelerini koordine ederek teknolojiye erişimlerini artırdım.",
+        "Yerel yönetimler ve STK'larla iş birliği yaparak teknoloji farkındalığı oluşturdum."
       ]
     }
   ],
   "Educations": [
     {
-      "School": "X Üniversitesi",
-      "Degree": "Bilgisayar Mühendisliği",
-      "Years": "2016 - 2020",
-      "Detail": "Yüksek Onur Derecesi"
+      "School": "Bilgisayar Mühendisliği",
+      "Degree": "Lisans Eğitimi",
+      "Years": "2018 - 2023",
+      "Detail": "Liderlik, girişimcilik ve topluluk yönetimi odaklı çalışmalar"
     }
   ],
   "Projects": [
     {
-      "Name": "Kişisel CV Sitesi",
-      "Description": "Özgeçmiş, proje ve iletişim modüllerini içeren responsive MVC uygulaması.",
+      "Name": "Etkinlik Yönetim Platformu",
+      "Description": "Teknoloji topluluklarının etkinlik planlama süreçlerini dijitalleştirerek katılımcı yönetimi, sponsorluk ve raporlama adımlarını tek panelde birleştiren web uygulaması.",
       "Tech": [
         "ASP.NET Core 9",
-        "Razor",
-        "Bootstrap 5"
+        "Entity Framework Core",
+        "PostgreSQL"
       ],
       "Url": "",
       "Repo": ""
     },
     {
-      "Name": "Görev Takip",
-      "Description": "Basit bir görev takip sistemi (CRUD + filtreleme).",
+      "Name": "Topluluk Mentorluk Ağı",
+      "Description": "Öğrenciler ve sektör profesyonellerini eşleştirerek mentorluk oturumlarını takip eden, içerik arşivi ve etkinlik takvimi sunan platform.",
       "Tech": [
-        "ASP.NET Core",
-        "EF Core",
-        "SQLite"
+        "ASP.NET Core MVC",
+        "SignalR",
+        "Azure"
       ]
     },
     {
-      "Name": "Hava Durumu",
-      "Description": "Harici API'den hava verisi alan küçük bir web app.",
+      "Name": "Sosyal Etki Mobil Uygulaması",
+      "Description": "Gönüllü eğitimlerde kullanılan, offline içerik paylaşımı ve öğrenci takibi sağlayan Flutter tabanlı mobil uygulama.",
       "Tech": [
-        "ASP.NET Core",
-        "HttpClient"
+        "Flutter",
+        "Firebase",
+        "REST API"
       ]
     }
   ]
