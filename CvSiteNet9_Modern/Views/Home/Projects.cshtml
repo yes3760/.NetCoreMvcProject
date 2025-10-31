@@ -1,25 +1,93 @@
 @model CvSiteNet9_Modern.Models.Resume
 @{
     ViewData["Title"] = "Projeler";
+    ViewData["Author"] = Model.Name;
+    var projectDescription = $"{Model.Name} tarafından geliştirilen projeler ve kullanılan teknolojiler";
+    ViewData["MetaDescription"] = projectDescription;
+    var projectKeywords = string.Join(", ", Model.Projects.SelectMany(p => p.Tech ?? new List<string>()));
+    if (!string.IsNullOrWhiteSpace(projectKeywords))
+    {
+        ViewData["MetaKeywords"] = $"{Model.Name}, proje portföyü, {projectKeywords}";
+    }
 }
-<section class="reveal">
-    <h1 class="h3 mb-4">Projeler</h1>
-    <div class="grid-portfolio">
-        @foreach (var p in Model.Projects)
+
+<section class="projects-hero glass reveal">
+    <div>
+        <p class="hero-eyebrow">Proje Portföyü</p>
+        <h1 class="hero-title">@Model.Name</h1>
+        @if (!string.IsNullOrWhiteSpace(Model.Summary))
         {
-            <article class="card glass h-100 hover-lift">
+            <p class="hero-summary">@Model.Summary</p>
+        }
+    </div>
+    <div class="projects-hero-meta">
+        <span class="badge-soft">Teknoloji & Sosyal Etki</span>
+        <p class="text-muted mb-0">Topluluk deneyimi ve ürün geliştirme süreçlerinden örnekler.</p>
+    </div>
+</section>
+
+<section class="section-spacing reveal">
+    <div class="section-heading">
+        <h2>Tüm Projeler</h2>
+        <p>Her proje; ihtiyaç analizi, kullanıcı deneyimi ve sürdürülebilir mimari prensipleriyle şekillendi.</p>
+    </div>
+    <div class="grid-portfolio">
+        @foreach (var project in Model.Projects)
+        {
+            <article class="project-card card glass h-100 hover-lift">
                 <div class="card-body">
-                    <h5 class="card-title">@p.Name</h5>
-                    <p class="card-text text-secondary">@p.Description</p>
+                    <div class="d-flex justify-content-between align-items-start gap-3">
+                        <div>
+                            <h3 class="card-title">@project.Name</h3>
+                            <p class="card-text text-secondary">@project.Description</p>
+                        </div>
+                        @if (project.Tech != null && project.Tech.Any())
+                        {
+                            <span class="project-tech-count">@project.Tech.Count teknoloji</span>
+                        }
+                    </div>
                     <div class="d-flex gap-2 flex-wrap">
-                        @if (p.Tech != null) { foreach (var t in p.Tech) { <span class="chip">@t</span> } }
+                        @if (project.Tech != null)
+                        {
+                            foreach (var tech in project.Tech)
+                            {
+                                <span class="chip">@tech</span>
+                            }
+                        }
                     </div>
                 </div>
-                <div class="card-footer bg-transparent border-0">
-                    @if (!string.IsNullOrWhiteSpace(p.Url)) { <a class="btn btn-outline-primary btn-sm me-2" href="@p.Url" target="_blank">Demo</a> }
-                    @if (!string.IsNullOrWhiteSpace(p.Repo)) { <a class="btn btn-outline-dark btn-sm" href="@p.Repo" target="_blank">Kod</a> }
+                <div class="card-footer bg-transparent border-0 d-flex flex-wrap gap-2">
+                    @if (!string.IsNullOrWhiteSpace(project.Url))
+                    {
+                        <a class="btn btn-outline-primary btn-sm" href="@project.Url" target="_blank">Canlı Önizleme</a>
+                    }
+                    @if (!string.IsNullOrWhiteSpace(project.Repo))
+                    {
+                        <a class="btn btn-outline-dark btn-sm" href="@project.Repo" target="_blank">Kaynak Kodu</a>
+                    }
                 </div>
             </article>
         }
     </div>
 </section>
+
+@if (Model.Highlights.Any())
+{
+    <section class="section-spacing reveal projects-highlight">
+        <div class="glass projects-highlight-inner">
+            <div>
+                <h2>Projelerle güçlenen değer önerisi</h2>
+                <p>Her çözüm; liderlik, eğitim ve topluluk kültürünü dijital ürünlerle buluşturuyor.</p>
+            </div>
+            <div class="highlight-grid compact">
+                @foreach (var highlight in Model.Highlights.Take(3))
+                {
+                    <article class="highlight-card highlight-@(string.IsNullOrWhiteSpace(highlight.Accent) ? "primary" : highlight.Accent)">
+                        <h3>@highlight.Title</h3>
+                        <p>@highlight.Description</p>
+                    </article>
+                }
+            </div>
+        </div>
+    </section>
+}

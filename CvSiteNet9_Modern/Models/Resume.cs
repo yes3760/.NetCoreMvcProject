@@ -15,6 +15,8 @@ namespace CvSiteNet9_Modern.Models
         public List<Experience> Experiences { get; set; } = new();
         public List<Education> Educations { get; set; } = new();
         public List<Project> Projects { get; set; } = new();
+        public List<Highlight> Highlights { get; set; } = new();
+        public List<ResumeStat> Stats { get; set; } = new();
     }
 
     public class SocialLinks
@@ -56,6 +58,21 @@ namespace CvSiteNet9_Modern.Models
         public List<string>? Tech { get; set; }
         public string? Url { get; set; }
         public string? Repo { get; set; }
+    }
+
+    public class Highlight
+    {
+        public string Title { get; set; } = "";
+        public string Description { get; set; } = "";
+        public string? Accent { get; set; }
+    }
+
+    public class ResumeStat
+    {
+        public string Label { get; set; } = "";
+        public int Value { get; set; }
+        public string? Suffix { get; set; }
+        public string? Description { get; set; }
     }
 
     public class ContactMessage

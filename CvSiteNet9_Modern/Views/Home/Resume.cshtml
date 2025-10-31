@@ -1,59 +1,160 @@
 @model CvSiteNet9_Modern.Models.Resume
 @{
     ViewData["Title"] = "Özgeçmiş";
+    ViewData["Author"] = Model.Name;
+    ViewData["MetaDescription"] = $"{Model.Name} özgeçmişi, profesyonel deneyimleri ve projeleri";
 }
-<section class="reveal">
-    <h1 class="h3 mb-4">Özgeçmiş</h1>
-    <div class="list-group list-group-flush glass mb-4">
-        <div class="list-group-item bg-transparent border-0 px-0">
-            <h2 class="h5">Deneyim</h2>
-        </div>
-        @foreach (var e in Model.Experiences)
+
+<section class="resume-header reveal glass">
+    <div>
+        <p class="hero-eyebrow">@Model.Name</p>
+        <h1 class="hero-title">Özgeçmiş</h1>
+        @if (!string.IsNullOrWhiteSpace(Model.Title))
         {
-            <div class="list-group-item bg-transparent">
-                <div class="d-flex justify-content-between align-items-center flex-wrap">
-                    <div>
-                        <div class="fw-semibold">@e.Role - @e.Company</div>
-                        <div class="text-muted small">@e.Location</div>
-                    </div>
-                    <div class="text-nowrap small">@e.Start - @(string.IsNullOrWhiteSpace(e.End) ? "Günümüz" : e.End)</div>
+            <p class="hero-subtitle">@Model.Title</p>
+        }
+    </div>
+    <div class="resume-header-meta">
+        @if (!string.IsNullOrWhiteSpace(Model.Location))
+        {
+            <span class="meta-chip"><span class="meta-dot"></span>@Model.Location</span>
+        }
+        @if (!string.IsNullOrWhiteSpace(Model.Email))
+        {
+            <a class="meta-chip" href="mailto:@Model.Email">@Model.Email</a>
+        }
+        @if (!string.IsNullOrWhiteSpace(Model.Phone))
+        {
+            <span class="meta-chip">@Model.Phone</span>
+        }
+    </div>
+</section>
+
+@if (Model.Highlights.Any())
+{
+    <section class="section-spacing reveal">
+        <div class="section-heading">
+            <h2>Odak Alanları</h2>
+            <p>Liderlikten eğitime uzanan değer ürettiğim başlıklar.</p>
+        </div>
+        <div class="highlight-grid">
+            @foreach (var highlight in Model.Highlights)
+            {
+                <article class="highlight-card highlight-@(string.IsNullOrWhiteSpace(highlight.Accent) ? "primary" : highlight.Accent)">
+                    <h3>@highlight.Title</h3>
+                    <p>@highlight.Description</p>
+                </article>
+            }
+        </div>
+    </section>
+}
+
+<section class="section-spacing reveal">
+    <div class="section-heading">
+        <h2>Deneyim</h2>
+        <p>Yönetim, ürün geliştirme ve gönüllülük ekseninde yürüttüğüm çalışmalar.</p>
+    </div>
+    <div class="timeline">
+        @foreach (var experience in Model.Experiences)
+        {
+            <article class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="timeline-period">@experience.Start - @(string.IsNullOrWhiteSpace(experience.End) ? "Günümüz" : experience.End)</span>
+                    <span class="timeline-location">@experience.Location</span>
                 </div>
-                <ul class="mt-2">
-                    @foreach (var h in e.Highlights) { <li>@h</li> }
-                </ul>
-            </div>
+                <div class="timeline-content glass">
+                    <h3>@experience.Role</h3>
+                    <span class="timeline-company">@experience.Company</span>
+                    <ul>
+                        @foreach (var bullet in experience.Highlights)
+                        {
+                            <li>@bullet</li>
+                        }
+                    </ul>
+                </div>
+            </article>
         }
     </div>
+</section>
 
-    <div class="list-group list-group-flush glass mb-4">
-        <div class="list-group-item bg-transparent border-0 px-0">
-            <h2 class="h5">Eğitim</h2>
-        </div>
-        @foreach (var ed in Model.Educations)
+<section class="section-spacing reveal">
+    <div class="section-heading">
+        <h2>Yetenekler</h2>
+        <p>Teknik uzmanlıklarımı ve operasyonel becerilerimi kategorilere göre grupladım.</p>
+    </div>
+    <div class="skill-grid">
+        @foreach (var skill in Model.Skills)
         {
-            <div class="list-group-item bg-transparent">
-                <div class="fw-semibold">@ed.School - @ed.Degree</div>
-                <div class="text-muted small">@ed.Years</div>
-                @if (!string.IsNullOrWhiteSpace(ed.Detail)) { <div class="mt-1">@ed.Detail</div> }
-            </div>
+            <article class="skill-card glass">
+                <h3>@skill.Heading</h3>
+                <ul>
+                    @foreach (var item in skill.Items)
+                    {
+                        <li>@item</li>
+                    }
+                </ul>
+            </article>
         }
     </div>
+</section>
 
-    <h2 class="h5">Projeler</h2>
+@if (Model.Educations.Any())
+{
+    <section class="section-spacing reveal">
+        <div class="section-heading">
+            <h2>Eğitim</h2>
+            <p>Akademik altyapımı ve odaklandığım çalışmalar.</p>
+        </div>
+        <div class="education-grid">
+            @foreach (var edu in Model.Educations)
+            {
+                <article class="education-card glass">
+                    <div class="education-year">@edu.Years</div>
+                    <div>
+                        <h3>@edu.School</h3>
+                        <p class="text-muted">@edu.Degree</p>
+                        @if (!string.IsNullOrWhiteSpace(edu.Detail))
+                        {
+                            <p>@edu.Detail</p>
+                        }
+                    </div>
+                </article>
+            }
+        </div>
+    </section>
+}
+
+<section class="section-spacing reveal">
+    <div class="section-heading">
+        <h2>Projeler</h2>
+        <p>Teknoloji ve sosyal etki odaklı seçili çalışmalar.</p>
+    </div>
     <div class="grid-portfolio">
-        @foreach (var p in Model.Projects)
+        @foreach (var project in Model.Projects)
         {
             <article class="card glass h-100 hover-lift">
                 <div class="card-body">
-                    <h5 class="card-title">@p.Name</h5>
-                    <p>@p.Description</p>
+                    <h3 class="card-title">@project.Name</h3>
+                    <p>@project.Description</p>
                     <div class="d-flex gap-2 flex-wrap">
-                        @if (p.Tech != null) { foreach (var t in p.Tech) { <span class="chip">@t</span> } }
+                        @if (project.Tech != null)
+                        {
+                            foreach (var tech in project.Tech)
+                            {
+                                <span class="chip">@tech</span>
+                            }
+                        }
                     </div>
                 </div>
-                <div class="card-footer bg-transparent border-0">
-                    @if (!string.IsNullOrWhiteSpace(p.Url)) { <a class="btn btn-outline-primary btn-sm me-2" href="@p.Url" target="_blank">Demo</a> }
-                    @if (!string.IsNullOrWhiteSpace(p.Repo)) { <a class="btn btn-outline-dark btn-sm" href="@p.Repo" target="_blank">Kod</a> }
+                <div class="card-footer bg-transparent border-0 d-flex gap-2">
+                    @if (!string.IsNullOrWhiteSpace(project.Url))
+                    {
+                        <a class="btn btn-outline-primary btn-sm" href="@project.Url" target="_blank">Canlı Önizleme</a>
+                    }
+                    @if (!string.IsNullOrWhiteSpace(project.Repo))
+                    {
+                        <a class="btn btn-outline-dark btn-sm" href="@project.Repo" target="_blank">Kaynak Kodu</a>
+                    }
                 </div>
             </article>
         }
