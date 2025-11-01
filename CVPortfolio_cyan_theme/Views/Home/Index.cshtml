@@ -1,0 +1,123 @@
+@using CVPortfolio.Models
+@model CVContent
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>@Model.PersonalInfo.Title</h1>
+            <p class="intro">Bilgisayar Mühendisliği öğrencisi olarak, teknik becerilerimi geliştirdiğim çeşitli projeler ve organizasyonlarda yer aldım. Yazılım geliştirme, web teknolojileri ve sistem tasarımı konularında tutkulu çalışmalar yürütmekteyim.</p>
+            <div class="contact-info">
+                <a href="tel:@Model.PersonalInfo.Phone" title="Telefon">📞 @Model.PersonalInfo.Phone</a>
+                <a href="mailto:@Model.PersonalInfo.Email" title="E-posta">📧 @Model.PersonalInfo.Email</a>
+                <a href="https://@Model.PersonalInfo.LinkedIn" target="_blank" rel="noopener" title="LinkedIn">🔗 LinkedIn</a>
+                <a href="https://@Model.PersonalInfo.GitHub" target="_blank" rel="noopener" title="GitHub">💻 GitHub</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="highlights">
+    <div class="container">
+        <h2>Başlıca Özellikler</h2>
+        <div class="highlights-grid">
+            @foreach (var highlight in Model.Highlights)
+            {
+                <div class="highlight-card">
+                    <p>✨ @highlight</p>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<section id="education" class="education">
+    <div class="container">
+        <h2>Eğitim Geçmişi</h2>
+        <div class="education-list">
+            @foreach (var edu in Model.Educations)
+            {
+                <div class="education-item">
+                    <div class="edu-header">
+                        <h3>@edu.School</h3>
+                        <p class="edu-program">@edu.Program</p>
+                    </div>
+                    <span class="edu-years">@edu.Years</span>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<section id="skills" class="skills">
+    <div class="container">
+        <h2>Teknik Beceriler</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>💻 Programlama Dilleri</h3>
+                <div class="skill-tags">
+                    @foreach (var lang in Model.Skills.Languages)
+                    {
+                        <span class="skill-tag">@lang</span>
+                    }
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>🛠️ Frameworkler & Teknolojiler</h3>
+                <div class="skill-tags">
+                    @foreach (var fw in Model.Skills.Frameworks)
+                    {
+                        <span class="skill-tag">@fw</span>
+                    }
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>🗄️ Veritabanı</h3>
+                <div class="skill-tags">
+                    @foreach (var db in Model.Skills.Database)
+                    {
+                        <span class="skill-tag">@db</span>
+                    }
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>⚙️ Diğer Teknikler</h3>
+                <div class="skill-tags">
+                    @foreach (var tech in Model.Skills.Technical)
+                    {
+                        <span class="skill-tag">@tech</span>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="languages">
+    <div class="container">
+        <h2>Dil Yeterlilikleri</h2>
+        <div class="language-list">
+            <div class="language-item">
+                <h3>🇬🇧 İngilizce</h3>
+                <p>@Model.Languages.English</p>
+            </div>
+            <div class="language-item">
+                <h3>🇩🇪 Almanca</h3>
+                <p>@Model.Languages.German</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="volunteer" class="volunteer">
+    <div class="container">
+        <h2>Gönüllü Deneyim</h2>
+        <div class="volunteer-list">
+            @foreach (var role in Model.VolunteerRoles)
+            {
+                <div class="volunteer-item">
+                    <p>✓ @role</p>
+                </div>
+            }
+        </div>
+    </div>
+</section>
