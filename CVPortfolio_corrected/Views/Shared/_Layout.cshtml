@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CV Porfolio</title>
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <h1>YUNUS EMRE SEVİNDİK</h1>
+            </div>
+            <nav class="navbar-menu">
+                <a href="#about">Hakkımda</a>
+                <a href="#education">Eğitim</a>
+                <a href="#skills">Beceriler</a>
+                <a href="#volunteer">Gönüllü Deneyim</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Yunus Emre Sevindik - Tüm Hakları Saklıdır</p>
+            <div class="social-links">
+                <a href="mailto:svndkyes33@gmail.com">Email</a>
+                <a href="tel:05102204933">Telefon</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
